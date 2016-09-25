@@ -1,0 +1,395 @@
+#menu, #menu ul /* Liste */     
+{
+        padding : 0; /* pas de marge intérieure */
+        margin : 100 px; /* ni extérieure */
+        list-style : none; /* on supprime le style par défaut de la liste */
+        line-height : 15px; /* on définit une hauteur pour chaque élément */
+        text-align : center; /* on centre le texte qui se trouve dans la liste */
+		
+		
+		
+}
+
+#menu /* Ensemble du menu */
+{
+        font-weight : bold; /* on met le texte en gras */
+        font-family : Arial; /* on utilise Arial, c'est plus beau ^^ */
+        font-size : 12px; /* hauteur du texte : 12 pixels */
+		float:left;
+		
+	
+		
+}
+
+#menu a /* Contenu des listes */
+{
+        display : block; /* on change le type d'élément, les liens deviennent des balises de type block */
+        padding : 0; /* aucune marge intérieure */
+        background-color: black; ; /* couleur de fond */        
+        color : #fff; /* couleur du texte */
+        text-decoration : none; /* on supprime le style par défaut des liens (la plupart du temps = souligné) */
+        width : 144px; /* largeur */
+		
+}
+
+#menu li /* Elements des listes */      
+{ 
+        float : left; 
+        /* pour IE qui ne reconnaît pas "transparent" */
+        border-right : 1px solid #fff; /* on met une bordure blanche à droite de chaque élément */
+		border-color : black;
+}
+
+/* IE ne reconnaissant pas le sélecteur ">" */
+html>body #menu li
+{
+        border: 1px solid black ; /* on met une bordure transparente à droite de chaque élément */
+}
+
+#menu li ul /* Sous-listes */
+{ 
+        position: absolute; /* Position absolue */
+        width: 144px; /* Largeur des sous-listes */
+        left: -999em; /* Hop, on envoie loin du champ de vision */
+}
+
+
+#menu li ul li /* Éléments de sous-listes */
+{
+        /* pour IE qui ne reconnaît pas "transparent" (comme précédemment) */
+        border-top : 1px solid #fff; /* on met une bordure blanche en haut de chaque élément d'une sous liste */
+} 
+
+
+
+html>body #menu li ul li                
+{
+        border-top : 1px solid transparent; /* on met une bordure transparente en haut de chaque élément */
+}
+
+#menu li ul ul 
+{
+        margin    : -22px 0 0 144px ; /* On décale les sous-sous-listes pour qu'elles ne soient pas au dessus des sous-listes */ 
+        /* pour IE qui ne reconnaît pas "transparent" (comme précédemment) */
+        border-left     : 1px solid #fff ; /* Petite bordure à gauche pour ne pas coller ... */      
+}
+
+
+html>body #menu li ul ul                
+{
+        border-left     : 1px solid transparent ; /* on met une bordure transparente sur la gauche de chaque élément */
+}
+
+
+#menu a:hover /* Lorsque la souris passe sur un des liens */    
+{
+        color: #000; /* On passe le texte en noir... */
+        background: #fff; /* ... et au contraire, le fond en blanc */
+}
+
+
+
+
+
+
+#menu li:hover ul ul, #menu li.sfhover ul ul /* Sous-sous-listes lorsque la souris passe sur un élément de liste */
+{
+        left: -999em; /* On expédie les sous-sous-listes hors du champ de vision */
+}
+
+#menu li:hover ul, #menu li li:hover ul, #menu li.sfhover ul, #menu li li.sfhover ul  /* Sous-listes lorsque la souris passe sur un élément de liste ET sous-sous-lites lorsque la souris passe sur un élément de sous-liste */
+{
+        left: auto; /* Repositionnement normal */
+        min-height: 0; /* Corrige un bug sous IE */
+} 
+
+body 
+ {
+  width: 730px;
+    /* Pour centrer notre page */
+   margin-top: 2px; /* Pour éviter de coller avec le haut de la fenêtre du navigateur */
+   margin-bottom: 20px;    /* Idem pour le bas du navigateur */
+ background-image:url('http://myphotographe.fr/Image/background.jpg');
+ margin:auto;
+  font-family:Arial, Geneva, sans-serif;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: white;
+  
+}
+table
+{
+	border-spacing:0px;
+	
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	padding:0px;
+	width:95%;
+	margin:5px auto 5px auto;
+}
+#pied_de_page
+{
+  
+   clear: both; /* Pour ne pas le pied se mélange au corps ou menu*/
+   text-align: right;
+   
+   width:730px;
+   font-weight : bold; 
+   font-family : Arial;
+   background-position : center; 
+   color: black;
+   font-weight : bold; 
+   font-family : Arial;
+   background-color: white; filter:alpha(opacity=20); -moz-opacity:0.20; opacity: 0.45;
+   
+}
+
+#corps
+{
+   background-position : center;
+background-repeat: no-repeat;
+  background-size: cover;   
+    
+}
+label
+{
+	display: block;
+	width: 209px;
+	float: left;
+	
+}
+
+#en_tete
+{
+   padding: 2px;  /*Modifier la marge*/
+   clear: both; /* Pour ne pas le pied se mélange au corps ou menu*/
+   text-align: left;
+   
+}
+.titre
+{
+text-align:center;
+}
+.gauche
+{
+	text-align: left;
+}
+#droite
+{
+	text-align: right;
+}
+#contenu_gauche1
+{
+	float:left;
+	width:200px;
+	color : lightsteelblue;
+}
+#contenu_centre1 
+{
+	float:left;
+	width:200px;
+	color : lightsteelblue;
+}
+
+#contenu_droite1 
+{
+	float:right;
+	width:90px;
+	color : lightsteelblue;
+}
+#contenu_droite 
+{
+	float:left;
+	width:70px;
+	
+}
+#contenu_droite2 
+{
+	float:left;
+	width:100px;
+	
+}
+#contenu_gauche
+{
+	float:left;
+	width:250px;
+	
+}
+#contenu_gauche3
+{
+	float:left;
+	width:230px;
+	
+	
+}
+#contenu_centre 
+{
+	float:left;
+	width:320px;
+	
+}
+
+.classe_button
+{
+border:2px solid #aaa;color:#000;text-decoration:none;background-color:#fff;
+}
+.classe_button1
+{
+border:2px solid #aaa;color:red;text-decoration:none;background-color:#fff;
+}
+
+.cro1 
+{
+	
+	
+   clear: both; /* Pour ne pas le pied se mélange au corps ou menu*/
+  padding: 20px;  /*Modifier la marge*/
+   clear: both; /* Pour ne pas le pied se mélange au corps ou menu*/
+   /*border: 3px solid black;filter:alpha(opacity=20); -moz-opacity:0.60; opacity: 0.60;/* la bordure*/
+   color: black;
+   
+   background-repeat: no-repeat;
+  background-size: cover;
+   
+   font-weight : bold; 
+   font-family : Arial;
+	background-color:  white; filter:alpha(opacity=20); -moz-opacity:0.60; opacity: 0.60;
+}
+.cro 
+{
+	
+	
+   clear: both; /* Pour ne pas le pied se mélange au corps ou menu*/
+  padding: 20px;  /*Modifier la marge*/
+   clear: both; /* Pour ne pas le pied se mélange au corps ou menu*/
+   border: 3px solid black; 
+   color: black;
+   background-repeat: no-repeat;
+  background-size: cover;
+   
+   font-weight : bold; 
+   font-family : Arial;
+	background-color:  white; filter:alpha(opacity=20); -moz-opacity:0.60; opacity: 0.60;
+}
+
+
+.cro2 /* cadre transparent*/
+{
+	
+	background-repeat: no-repeat;
+  background-size: cover;
+   clear: both; /* Pour ne pas le pied se mélange au corps ou menu*/
+	background-image:url('http://127.0.0.1/site%20a%20envoyer/Image/studio%20(1)couleur.jpg');
+	background-repeat: no-repeat;
+  background-size: cover;
+   font-weight : bold; 
+   font-family : Arial;
+   background-color: white; filter:alpha(opacity=20); -moz-opacity:0.10; opacity: 0.90;
+	
+}
+.cro3 
+{
+	
+	
+   clear: both; /* Pour ne pas le pied se mélange au corps ou menu*/
+  padding: 20px;  /*Modifier la marge*/
+   clear: both; /* Pour ne pas le pied se mélange au corps ou menu*/
+   border: 3px solid black;/* la bordure*/
+   color: black; 
+   font-weight : bold; 
+   font-family : Arial;
+	background-color:  white; filter:alpha(opacity=20); -moz-opacity:0.60; opacity: 0.60;
+}
+.cro4 /* cadre transparent*/
+{
+	
+	background-repeat: no-repeat;
+  background-size: cover;
+   clear: both; /* Pour ne pas le pied se mélange au corps ou menu*/
+	border: 3px solid black;
+	background-repeat: no-repeat;
+  background-size: cover;
+  margin-left:50px;
+  margin-right:50px;
+  
+   font-weight : bold; 
+   font-family : Arial;
+   background-color: white; filter:alpha(opacity=20); -moz-opacity:0.60; opacity: 0.60;
+	
+}
+.fond
+{
+	background-image:url('http://127.0.0.1/site%20a%20envoyer/Image/studio%20(1)couleur.jpg');
+	  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+nav
+{
+    float: right;
+    
+    
+}
+.cro5 
+{
+	
+	
+   clear: both; /* Pour ne pas le pied se mélange au corps ou menu*/
+  padding: 20px;  /*Modifier la marge*/
+   clear: both; /* Pour ne pas le pied se mélange au corps ou menu*/
+   border: 3px solid black; 
+   color: black;
+   background-repeat: no-repeat;
+  background-size: cover;
+   margin-left:50px;
+  margin-right:50px;
+   font-weight : bold; 
+   font-family : Arial;
+	background-color:  white; filter:alpha(opacity=20); -moz-opacity:0.60; opacity: 0.60;
+}
+.bordure 
+{
+	
+	
+   
+   border: 3px solid black;
+   color: black;
+   
+  background-size: cover;
+   
+   font-weight : bold; 
+   font-family : Arial;
+	
+}
+#contenu_gauche4
+{
+	float:left;
+	width:200px;
+	
+	
+}
+#contenu_centre4 
+{
+	float:left;
+	width:760px;
+	
+}
+#contenu_droite4 
+{
+	float:left;
+	width:1px;
+	
+}
+
+strong
+{
+color:purple;
+}
+
+mark
+{
+    /* La couleur de fond prend le pas sur celle de toute la page */
+    background-color: grey;
+    color: black;
+}
